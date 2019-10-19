@@ -1,3 +1,9 @@
+if (!localStorage.getItem('ocdapikey')) {
+  localStorage.setItem(
+    'ocdapikey',
+    prompt('What is your OpenCage Data API key?')
+  );
+}
 // creates the map
 var map = new ol.Map({
   target: 'map',
@@ -20,7 +26,7 @@ map.addOverlay(popup);
 var geocoder = new Geocoder('nominatim', {
   provider: 'opencage',
   lang: 'en',
-  key: 'YOUR-OPENCAGE-API-KEY',
+  key: localStorage.getItem('ocdapikey'), // 'YOUR-OPENCAGE-API-KEY',
   placeholder: 'Search with OpenCage for ...',
   limit: 5,
   debug: false,

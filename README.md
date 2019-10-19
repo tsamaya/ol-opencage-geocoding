@@ -56,7 +56,7 @@ To use the OL plugin, load the plugin's CSS and JavaScript files from [jsDelivr]
 <script src="https://cdn.jsdelivr.net/npm/ol-geocoder"></script>
 ```
 
-Instantiate the geocoder with some options (ie. OpenCage API Key:
+Instantiate the geocoder with some options (ie. OpenCage API Key):
 
 ```js
 var geocoder = new Geocoder('nominatim', {
