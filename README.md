@@ -1,4 +1,4 @@
-# Tutorial : OpenLayers plugin
+# Tutorial : how to use OpenCage data API with OpenLayers
 
 ### Create the map
 
