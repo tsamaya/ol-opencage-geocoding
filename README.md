@@ -8,7 +8,7 @@ Here is bootstrap example from OpenLayers:
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.0/css/ol.css">
     <style>
         html,
         body,
@@ -24,7 +24,7 @@ Here is bootstrap example from OpenLayers:
             bottom: 0;
         }
     </style>
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/build/ol.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.0/build/ol.js"></script>
     <title>Opencage Data with OpenLayers</title>
   </head>
   <body>
@@ -89,7 +89,7 @@ map.addControl(geocoder);
 Do something when an address is chosen:
 
 ```js
-geocoder.on('addresschosen', function(evt) {
+geocoder.on('addresschosen', function (evt) {
   console.info(evt);
   popup.show(evt.coordinate, evt.address.formatted);
 });
