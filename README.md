@@ -1,4 +1,4 @@
-# Tutorial : how to use OpenCage data API with OpenLayers
+# Tutorial : how to use OpenCage geocoding API with OpenLayers
 
 ### Create the map
 
@@ -97,7 +97,7 @@ geocoder.on('addresschosen', function (evt) {
 
 ## Resources
 
-- OpenCage Data Geocoder API : https://opencagedata.com/
+- OpenCage Geocoding API : https://opencagedata.com/api
 
 - OpenLayers : https://openlayers.org/
 
