@@ -63,7 +63,7 @@ var geocoder = new Geocoder('nominatim', {
   provider: 'opencage', // <----- PROVIDER is opencage
   lang: 'en',
   key: 'YOUR-OPENCAGE-API-KEY',
-  placeholder: 'Search with OpenCage for ...',
+  placeholder: 'Geocode with OpenCage...',
   limit: 5,
   debug: false,
   autoComplete: false,
