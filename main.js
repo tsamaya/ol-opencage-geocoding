@@ -1,6 +1,7 @@
-if (!localStorage.getItem('ocdapikey')) {
+var LS_OPENCAGE_API_KEY = 'opencage.key.geocoding';
+if (!localStorage.getItem(LS_OPENCAGE_API_KEY)) {
   localStorage.setItem(
-    'ocdapikey',
+    LS_OPENCAGE_API_KEY,
     prompt('What is your OpenCage Data API key?')
   );
 }
@@ -26,8 +27,8 @@ map.addOverlay(popup);
 var geocoder = new Geocoder('nominatim', {
   provider: 'opencage',
   lang: 'en',
-  key: localStorage.getItem('ocdapikey'), // 'YOUR-OPENCAGE-API-KEY',
-  placeholder: 'Search with OpenCage for ...',
+  key: localStorage.getItem(LS_OPENCAGE_API_KEY), // 'YOUR-OPENCAGE-API-KEY',
+  placeholder: 'Geocode with OpenCage...',
   limit: 5,
   debug: false,
   autoComplete: false,
@@ -36,7 +37,7 @@ var geocoder = new Geocoder('nominatim', {
 map.addControl(geocoder);
 
 // Listen for a chosen address
-geocoder.on('addresschosen', function(evt) {
+geocoder.on('addresschosen', function (evt) {
   console.info(evt);
   popup.show(evt.coordinate, evt.address.formatted);
 });
